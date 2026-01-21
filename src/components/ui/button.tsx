@@ -5,28 +5,28 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-wide transition-colors disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-sans font-black uppercase tracking-[0.15em] transition-all duration-500 disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20",
   {
     variants: {
       variant: {
-        default: "bg-[#c9a961] text-white hover:bg-[#b89850]",
+        default: "bg-cta text-white hover:bg-cta-hover shadow-[0_10px_30px_-10px_rgba(243,106,60,0.4)] hover:shadow-[0_15px_40px_-10px_rgba(243,106,60,0.5)] active:scale-[0.98]",
         destructive:
-          "bg-red-500 text-white hover:bg-red-500/90",
+          "bg-red-500 text-white hover:bg-red-500/90 shadow-lg active:scale-[0.98]",
         outline:
-          "border border-gray-200 bg-white hover:bg-gray-50 text-gray-900",
+          "border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/20 text-white shadow-xl backdrop-blur-sm active:scale-[0.98]",
         secondary:
-          "bg-gray-900 text-white hover:bg-gray-800",
+          "bg-cta-secondary text-white hover:bg-cta-secondary-hover shadow-[0_10px_30px_-10px_rgba(78,193,200,0.3)] hover:shadow-[0_15px_40px_-10px_rgba(78,193,200,0.4)] active:scale-[0.98]",
         ghost:
-          "hover:bg-gray-100 text-gray-900",
-        link: "text-gray-900 underline-offset-4 hover:underline",
+          "hover:bg-white/5 text-white active:scale-[0.98]",
+        link: "text-white underline-offset-4 hover:underline",
       },
       size: {
-        default: "px-6 py-3",
-        sm: "px-4 py-2 text-sm",
-        lg: "px-8 py-4 text-lg",
-        icon: "size-9",
-        "icon-sm": "size-8",
-        "icon-lg": "size-10",
+        default: "px-8 py-5",
+        sm: "px-5 py-2.5 text-xs",
+        lg: "px-12 py-7 text-lg",
+        icon: "size-11",
+        "icon-sm": "size-9",
+        "icon-lg": "size-12",
       },
     },
     defaultVariants: {

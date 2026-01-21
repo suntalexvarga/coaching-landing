@@ -5,36 +5,113 @@ html {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --beige: #d4c5b0;
-  --beige-dark: #b8a892;
-  --gold: #c9a961;
-  --off-white: #faf9f7;
+  /* Dark Mode Base - Blue Tint */
+  --background: #0F1A2A;
+  --foreground: #FFFFFF;
+  
+  /* Primary - Turcoaz Insight (mai închis) */
+  --primary: #3BAFB6;
+  --primary-accent: #2A9DA4;
+  --primary-shade: #0F1A2A;
+  --primary-tint: #1A2535;
+  
+  /* Accent - Orange Action */
+  --accent: #F36A3C;
+  --accent-hover: #D95830;
+  --accent-tint: #FFC4AE;
+  
+  /* CTA */
+  --cta: #F36A3C;
+  --cta-hover: #D95830;
+  --cta-secondary: #3BAFB6;
+  --cta-secondary-hover: #2A9DA4;
+  --cta-tint: #FFC4AE;
+  --cta-text: #FFFFFF;
+  
+  /* Growth (folosit pentru checkmarks, bullets) - folosim turcoaz */
+  --growth: #3BAFB6;
+  --growth-tint: #1A2535;
+  --growth-vibrant: #2A9DA4;
+  
+  /* Warm Emotional - folosim orange */
+  --warm: #F36A3C;
+  --warm-tint: #FFC4AE;
+  --warm-shade: #D95830;
+  
+  /* Neutre - Dark Mode Blue Tint */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8C5CC;
+  --bg-alt: #1A2535;
+  --border: #2A3A4A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-serif: var(--font-serif);
-  --font-sans: var(--font-sans);
+  
+  --color-primary: var(--primary);
+  --color-primary-accent: var(--primary-accent);
+  --color-primary-shade: var(--primary-shade);
+  --color-primary-tint: var(--primary-tint);
+  
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-tint: var(--accent-tint);
+  
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-secondary: var(--cta-secondary);
+  --color-cta-secondary-hover: var(--cta-secondary-hover);
+  --color-cta-tint: var(--cta-tint);
+  --color-cta-text: var(--cta-text);
+  
+  --color-growth: var(--growth);
+  --color-growth-tint: var(--growth-tint);
+  --color-growth-vibrant: var(--growth-vibrant);
+  
+  --color-warm: var(--warm);
+  --color-warm-tint: var(--warm-tint);
+  --color-warm-shade: var(--warm-shade);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-bg-alt: var(--bg-alt);
+  --color-border-custom: var(--border);
+
+  --font-sans: var(--font-inter);
+
+  --shadow-glow: 0 0 25px rgba(243, 106, 60, 0.4);
+  --shadow-glow-primary: 0 0 25px rgba(59, 175, 182, 0.3);
+  --shadow-card: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  
+  --animate-gradient: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure all text elements use sans-serif by default */
-p, span, a, button, li, div {
-  font-family: var(--font-sans), system-ui, sans-serif;
-}
-
-.font-serif {
-  font-family: var(--font-serif), Georgia, serif;
+/* Ensure all text elements use Inter consistently */
+* {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .font-sans {
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Use Inter for headings too (like Acquisition.com) */
+.font-serif,
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }

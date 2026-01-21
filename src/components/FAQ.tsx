@@ -23,25 +23,27 @@ const FAQ = ({ items }: FAQProps) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="border-b border-gray-200 pb-4 last:border-b-0"
+          className="border border-white/[0.05] bg-white/[0.01] rounded-md overflow-hidden transition-all duration-500 hover:border-white/10 hover:bg-white/[0.02]"
         >
           <button
             onClick={() => handleToggle(index)}
-            className="w-full text-left flex justify-between items-start gap-4 py-2"
+            className="w-full text-left flex justify-between items-center gap-6 p-6 md:p-8 group"
             aria-expanded={openIndex === index}
             aria-controls={`faq-answer-${index}`}
           >
-            <span className="font-sans font-semibold text-lg text-gray-900 pr-8">
+            <span className="font-sans font-semibold text-lg md:text-xl text-white/90 group-hover:text-white transition-colors">
               {item.question}
             </span>
-            <span className="text-gray-600 text-xl flex-shrink-0 mt-1">
-              {openIndex === index ? "−" : "+"}
-            </span>
+            <div className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center transition-all duration-500 group-hover:border-primary/40 group-hover:bg-primary/5 flex-shrink-0">
+              <span className="text-white/30 text-lg transition-transform duration-500" style={{ transform: openIndex === index ? 'rotate(45deg)' : 'rotate(0deg)' }}>
+                +
+              </span>
+            </div>
           </button>
           {openIndex === index && (
             <div
               id={`faq-answer-${index}`}
-              className="mt-2 text-gray-700 leading-relaxed pl-0 pr-12 font-sans"
+              className="px-6 md:px-8 pb-6 md:pb-8 text-base md:text-lg text-white/40 leading-relaxed font-light font-sans border-t border-white/5 pt-6"
             >
               {item.answer}
             </div>

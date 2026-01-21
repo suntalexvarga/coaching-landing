@@ -20,9 +20,9 @@ export const ScrollProgress = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 h-1 bg-gray-100 z-50">
+    <div className="fixed top-0 left-0 right-0 h-1 bg-border-custom z-50">
       <div
-        className="h-full bg-[#c9a961] transition-all duration-150 ease-out"
+        className="h-full bg-cta transition-all duration-150 ease-out"
         style={{ width: `${scrollProgress}%` }}
       />
     </div>

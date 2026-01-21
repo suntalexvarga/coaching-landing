@@ -10,13 +10,13 @@ const badgeVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-[#c9a961] text-white",
+          "bg-cta text-white",
         secondary:
-          "bg-gray-100 text-gray-900",
+          "bg-bg-alt text-text-primary",
         destructive:
           "bg-red-500 text-white",
         outline:
-          "border border-gray-200 text-gray-900",
+          "border border-border-custom text-text-primary",
       },
     },
     defaultVariants: {
