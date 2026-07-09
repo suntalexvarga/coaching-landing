@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "Alexandru Varga - Coaching 1:1 pe Autosabotare",
-  description: "Coaching 1 la 1 pentru oameni care vor rezultate reale, nu motivație de o zi.",
+  title: "Alex Varga — Perspective Coach",
+  description:
+    "Schimbi direcția când îți schimbi percepția. Coaching de perspectivă & NLP pentru cine simte că nu-și trăiește propria viață.",
 };
 
 export default function RootLayout({
@@ -26,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro">
-      <body
-        className={`${plusJakartaSans.variable} ${inter.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {children}
       </body>
     </html>
