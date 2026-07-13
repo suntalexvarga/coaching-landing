@@ -167,11 +167,22 @@ export default function App() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-20 text-center flex flex-col items-center">
           <Reveal delay={50}>
-            <div className="relative w-24 h-24 md:w-32 md:h-32 mb-10 rounded-full border border-white/10 shadow-[0_0_40px_rgba(20,184,166,0.15)] flex items-center justify-center bg-[#050505] overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-900/40 to-[#C89B7B]/40"></div>
-              <span className="relative z-10 font-cinematic text-3xl md:text-4xl font-bold bg-gradient-to-br from-teal-400 to-[#C89B7B] bg-clip-text text-transparent">
-                AV
-              </span>
+            <div className="relative w-28 h-28 md:w-36 md:h-36 mb-10 rounded-full overflow-hidden shadow-[0_0_60px_rgba(20,184,166,0.18)]">
+              <picture>
+                {/* Cine are „reduce motion" activat primeste cadrul static. */}
+                <source
+                  media="(prefers-reduced-motion: reduce)"
+                  srcSet="/av-wayfinder-poster.webp"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/av-wayfinder.webp"
+                  alt="Alex Varga — Wayfinder"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover"
+                />
+              </picture>
             </div>
           </Reveal>
 
