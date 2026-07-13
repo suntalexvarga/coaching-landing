@@ -14,6 +14,9 @@ import {
   BrainCircuit,
 } from "lucide-react";
 
+// Toate CTA-urile de aplicare duc catre formularul extern.
+const APPLY_URL = "https://formular.wayfindercoaching.ro";
+
 // --- CUSTOM HOOK FOR SCROLL ANIMATIONS ---
 const useIntersectionObserver = (
   options: { threshold?: number; triggerOnce?: boolean } = {
@@ -139,7 +142,7 @@ export default function App() {
             </span>
           </div>
           <a
-            href="#apply"
+            href={APPLY_URL}
             className="hidden md:flex items-center gap-2 text-sm uppercase tracking-wider text-white/80 hover:text-white transition-colors group"
           >
             <span className="border-b border-transparent group-hover:border-[#C89B7B] pb-1 transition-all">
@@ -206,7 +209,7 @@ export default function App() {
 
           <Reveal delay={700}>
             <a
-              href="#apply"
+              href={APPLY_URL}
               className="btn-premium inline-flex items-center gap-3 px-8 py-4 text-white uppercase tracking-widest text-sm rounded-sm"
             >
               Aplică pentru o discuție
@@ -689,22 +692,14 @@ export default function App() {
                 </span>
               </p>
 
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <input
-                  type="text"
-                  placeholder="Numele tău"
-                  className="w-full bg-[#050505] border border-white/10 p-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-teal-500 transition-colors"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full bg-[#050505] border border-white/10 p-4 text-white placeholder:text-zinc-600 focus:outline-none focus:border-teal-500 transition-colors"
-                />
-                <button className="w-full btn-premium py-5 mt-4 text-white uppercase tracking-widest text-sm font-semibold flex items-center justify-center gap-3">
-                  Aplică Acum
-                  <ArrowRight className="w-4 h-4 text-[#C89B7B]" />
-                </button>
-              </form>
+              <a
+                href={APPLY_URL}
+                className="w-full btn-premium py-5 px-6 text-white uppercase tracking-widest text-sm font-semibold flex items-center justify-center gap-3 rounded-sm"
+              >
+                Aplică Acum
+                <ArrowRight className="w-4 h-4 text-[#C89B7B]" />
+              </a>
+
               <p className="text-[10px] text-zinc-600 uppercase tracking-wider mt-6">
                 Locurile sunt limitate pentru sesiunile 1:1.
               </p>
