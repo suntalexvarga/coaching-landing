@@ -167,18 +167,9 @@ export default function App() {
           <Reveal delay={50}>
             <div className="relative w-28 h-28 md:w-36 md:h-36 mb-8 rounded-full border border-white/10 shadow-[0_0_40px_rgba(20,184,166,0.15)] flex items-center justify-center bg-[#050505] overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-900/40 to-[#C89B7B]/40 z-0"></div>
-              <span className="relative z-0 font-cinematic text-4xl font-bold bg-gradient-to-br from-teal-400 to-[#C89B7B] bg-clip-text text-transparent">
+              <span className="relative z-10 font-cinematic text-4xl md:text-5xl font-bold bg-gradient-to-br from-teal-400 to-[#C89B7B] bg-clip-text text-transparent">
                 AV
               </span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/av-logo.jpg"
-                alt="Alex Varga Logo"
-                className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-1000 group-hover:scale-110"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
-                }}
-              />
             </div>
           </Reveal>
 
@@ -230,8 +221,8 @@ export default function App() {
       </section>
 
       {/* 2. REALITATEA PE CARE PUȚINI O SPUN */}
-      <section className="py-32 relative border-t border-white/5">
-        <BackgroundRune className="w-[800px] h-[800px] -right-[400px] top-0 text-teal-500" />
+      <section className="py-20 md:py-32 relative border-t border-white/5 overflow-hidden">
+        <BackgroundRune className="w-[500px] h-[500px] md:w-[800px] md:h-[800px] -right-[250px] md:-right-[400px] top-0 text-teal-500" />
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex flex-col gap-12 max-w-3xl mx-auto">
             <Reveal direction="up">
@@ -302,7 +293,7 @@ export default function App() {
       </section>
 
       {/* 3. ÎNTREBAREA CARE DOARE */}
-      <section className="py-40 relative mystic-gradient border-y border-white/5 overflow-hidden">
+      <section className="py-24 md:py-40 relative mystic-gradient border-y border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(200,155,123,0.03)_0%,_transparent_50%)]"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <Reveal>
@@ -329,18 +320,18 @@ export default function App() {
       </section>
 
       {/* 4. POVESTEA PERSONALĂ */}
-      <section className="py-32 relative bg-[#0a0a0a]">
+      <section className="py-20 md:py-32 relative bg-[#0a0a0a] overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <Reveal>
-            <h2 className="text-xs uppercase tracking-[0.3em] text-[#C89B7B] mb-16 text-center">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#C89B7B] mb-12 md:mb-16 text-center">
               Ghidul tău
-            </h2>
+            </p>
           </Reveal>
 
-          <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5 relative lg:sticky lg:top-32">
               <Reveal direction="right">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-sm group border border-white/5">
+                <figure className="relative aspect-[3/4] overflow-hidden rounded-sm group border border-white/5 m-0">
                   <div className="absolute inset-0 bg-teal-900/20 mix-blend-overlay z-10 transition-opacity duration-700 group-hover:opacity-0"></div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -349,25 +340,25 @@ export default function App() {
                     className="w-full h-full object-cover filter grayscale contrast-125 brightness-75 transition-all duration-700 group-hover:grayscale-0 group-hover:brightness-100"
                   />
                   <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-20"></div>
-                  <div className="absolute bottom-4 left-6 md:bottom-5 md:left-8 z-30">
-                    <h3 className="font-cinematic text-3xl text-white drop-shadow-xl">
+                  <figcaption className="absolute bottom-4 left-6 md:bottom-5 md:left-8 z-30">
+                    <span className="block font-cinematic text-2xl md:text-3xl text-white drop-shadow-xl">
                       Alex Varga
-                    </h3>
-                    <p className="text-sm text-[#14b8a6] uppercase tracking-widest mt-1 drop-shadow-md">
+                    </span>
+                    <span className="block text-xs md:text-sm text-[#14b8a6] uppercase tracking-widest mt-1 drop-shadow-md">
                       Perspective Coach
-                    </p>
-                  </div>
-                </div>
+                    </span>
+                  </figcaption>
+                </figure>
               </Reveal>
             </div>
 
             <div className="lg:col-span-7">
               <Reveal delay={200}>
                 <div className="space-y-8 text-lg md:text-xl font-light text-zinc-400">
-                  <h3 className="font-cinematic text-3xl md:text-5xl text-white leading-tight mb-12">
+                  <h2 className="font-cinematic text-3xl md:text-5xl text-white leading-tight mb-8 md:mb-12">
                     Mult timp m-am simțit ca un actor într-o piesă{" "}
                     <span className="italic text-[#C89B7B]">scrisă de alții.</span>
-                  </h3>
+                  </h2>
 
                   <div className="pl-6 border-l border-white/10 space-y-6 text-zinc-300">
                     <p>Am jucat după regulile altora.</p>
@@ -416,13 +407,13 @@ export default function App() {
       </section>
 
       {/* 5. MOMENTUL DE SHIFT */}
-      <section className="py-32 relative">
-        <BackgroundRune className="w-[600px] h-[600px] -left-[300px] top-[10%] text-[#C89B7B]" />
+      <section className="py-20 md:py-32 relative overflow-hidden">
+        <BackgroundRune className="w-[400px] h-[400px] md:w-[600px] md:h-[600px] -left-[200px] md:-left-[300px] top-[10%] text-[#C89B7B]" />
         <div className="max-w-6xl mx-auto px-6">
           <Reveal>
             <div className="text-center mb-20 max-w-3xl mx-auto">
               <Eye className="w-8 h-8 text-teal-500 mx-auto mb-6" />
-              <h2 className="font-cinematic text-3xl md:text-5xl text-white mb-6">
+              <h2 className="font-cinematic text-3xl md:text-5xl text-white leading-tight mb-6">
                 Am schimbat interpretarea mea asupra realității.
               </h2>
             </div>
@@ -482,10 +473,10 @@ export default function App() {
       </section>
 
       {/* 6. CE FACE AZI & PENTRU CINE ESTE */}
-      <section className="py-32 relative bg-[#111111] border-y border-white/5">
+      <section className="py-20 md:py-32 relative bg-[#111111] border-y border-white/5 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <Reveal>
-            <div className="mb-24 md:flex items-end justify-between border-b border-white/10 pb-12">
+            <div className="mb-16 md:mb-24 md:flex items-end justify-between border-b border-white/10 pb-8 md:pb-12">
               <div className="max-w-2xl">
                 <h2 className="font-cinematic text-4xl md:text-5xl text-white leading-tight mb-4">
                   Astăzi, ghidez oameni să-și{" "}
@@ -548,11 +539,11 @@ export default function App() {
       </section>
 
       {/* 7. FRAMEWORK-UL TRANSFORMĂRII */}
-      <section className="py-32 relative">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           <Reveal>
-            <div className="text-center mb-20">
-              <h2 className="font-cinematic text-4xl text-white mb-6">
+            <div className="text-center mb-16 md:mb-20">
+              <h2 className="font-cinematic text-3xl md:text-5xl text-white leading-tight mb-6">
                 Framework-ul Transformării
               </h2>
               <p className="text-zinc-400">
@@ -611,17 +602,17 @@ export default function App() {
       </section>
 
       {/* 8. ADEVĂRUL PE CARE NU-L SPUNE NIMENI */}
-      <section className="py-40 relative bg-black border-y border-white/5 overflow-hidden">
+      <section className="py-24 md:py-40 relative bg-black border-y border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(200,155,123,0.05)_0%,_transparent_70%)]"></div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <Reveal>
-            <h2 className="text-xs uppercase tracking-[0.3em] text-[#C89B7B] mb-8 font-semibold">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#C89B7B] mb-6 font-semibold">
               Costul Transformării
-            </h2>
-            <h3 className="font-cinematic text-4xl md:text-5xl text-white leading-tight mb-12">
+            </p>
+            <h2 className="font-cinematic text-3xl md:text-5xl text-white leading-tight mb-10 md:mb-12">
               Adevărul pe care <br /> nu-l spune nimeni.
-            </h3>
+            </h2>
           </Reveal>
 
           <Reveal delay={200}>
@@ -642,10 +633,10 @@ export default function App() {
       </section>
 
       {/* 9. CE SE SCHIMBĂ */}
-      <section className="py-32 relative">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <Reveal>
-            <h2 className="font-cinematic text-3xl md:text-5xl text-white text-center mb-20">
+            <h2 className="font-cinematic text-3xl md:text-5xl text-white text-center leading-tight mb-16 md:mb-20">
               Dincolo de proces.{" "}
               <span className="text-teal-500 italic">Cine devii.</span>
             </h2>
@@ -670,7 +661,7 @@ export default function App() {
       </section>
 
       {/* 10. CTA FINAL */}
-      <section id="apply" className="py-32 md:py-48 relative overflow-hidden">
+      <section id="apply" className="py-24 md:py-48 relative overflow-hidden scroll-mt-24">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(20,184,166,0.15)_0%,_transparent_60%)]"></div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -736,16 +727,16 @@ export default function App() {
             &ldquo;Schimbi direcția când îți schimbi percepția.&rdquo;
           </p>
 
-          <div className="flex gap-4 text-sm text-zinc-500">
-            <a href="#" className="hover:text-white transition-colors">
-              Instagram
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Facebook
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              LinkedIn
-            </a>
+          <div className="flex gap-2 text-sm text-zinc-500">
+            {["Instagram", "Facebook", "LinkedIn"].map((label) => (
+              <a
+                key={label}
+                href="#"
+                className="inline-flex items-center min-h-[44px] px-3 rounded-sm hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C89B7B] transition-colors"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </div>
         <div className="mt-12 text-zinc-700 text-xs uppercase tracking-widest">
