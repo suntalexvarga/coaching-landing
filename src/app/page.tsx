@@ -366,8 +366,10 @@ export default function App() {
                   <div className="absolute inset-0 bg-teal-900/20 mix-blend-overlay z-10 transition-opacity duration-700 group-hover:opacity-0"></div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                    src="/av-portrait.webp"
                     alt="Alex Varga"
+                    width={900}
+                    height={1200}
                     className="w-full h-full object-cover filter grayscale contrast-125 brightness-75 transition-all duration-700 group-hover:grayscale-0 group-hover:brightness-100"
                   />
                   <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-20"></div>
