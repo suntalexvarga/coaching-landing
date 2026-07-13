@@ -104,7 +104,7 @@ const BackgroundRune = ({ className }: { className?: string }) => (
 
 // Eyebrow reutilizabil (label mic, nu heading — pastreaza ierarhia corecta).
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
-  <p className="text-xs uppercase tracking-[0.3em] text-[#C89B7B] font-semibold">
+  <p className="text-balance text-xs uppercase tracking-[0.3em] text-[#C89B7B] font-semibold">
     {children}
   </p>
 );
@@ -177,9 +177,10 @@ export default function App() {
 
           <Reveal delay={250}>
             <h1 className="font-cinematic text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-10">
-              La un moment dat, <br className="hidden md:block" /> începi să simți
-              că <br />
-              <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-300 to-[#C89B7B] text-glow-copper">
+              <span className="block text-balance">
+                La un moment dat, începi să simți că
+              </span>
+              <span className="block text-balance italic text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-300 to-[#C89B7B] text-glow-copper">
                 nu trăiești viața ta.
               </span>
             </h1>
@@ -239,7 +240,7 @@ export default function App() {
                 <p>Să fii „ok”.</p>
                 <p>Să nu deranjezi.</p>
                 <p>Să faci ce trebuie.</p>
-                <p className="text-white pt-4">
+                <p className="text-balance text-white pt-4">
                   Și, la un moment dat, adaptarea asta a devenit normalitate.
                 </p>
               </div>
@@ -252,18 +253,16 @@ export default function App() {
                   Ai început să:
                 </p>
                 <ul className="space-y-4 text-lg text-zinc-300 relative z-10">
-                  <li className="flex gap-4">
-                    <span className="text-teal-500 shrink-0">→</span> spui „da”
-                    când voiai să spui „nu”
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="text-teal-500 shrink-0">→</span> alegi
-                    siguranța în locul adevărului
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="text-teal-500 shrink-0">→</span> îți ajustezi
-                    comportamentul în funcție de ceilalți
-                  </li>
+                  {[
+                    "spui „da” când voiai să spui „nu”",
+                    "alegi siguranța în locul adevărului",
+                    "îți ajustezi comportamentul în funcție de ceilalți",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-4">
+                      <span className="text-teal-500 shrink-0">→</span>
+                      <span className="text-balance">{item}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Reveal>
@@ -277,10 +276,10 @@ export default function App() {
                 <p className="font-cinematic text-3xl md:text-5xl text-white italic leading-tight text-glow-copper">
                   Și fără să-ți dai seama…
                 </p>
-                <p className="text-zinc-300 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto">
+                <p className="text-balance text-zinc-300 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto">
                   ai început să fii o versiune a ta sufocată de așteptări și
                   presiune,
-                  <span className="text-[#C89B7B] font-medium block mt-2">
+                  <span className="text-balance text-[#C89B7B] font-medium block mt-2">
                     dar te păcălești că funcționează.
                   </span>
                 </p>
@@ -490,19 +489,17 @@ export default function App() {
                 Sunt coach &amp; trainer NLP.
               </h2>
               <div className="space-y-6 text-lg md:text-xl text-zinc-400 font-light leading-relaxed max-w-3xl">
-                <p>
+                <p className="text-balance">
                   Misiunea mea este să sprijin oamenii să devină{" "}
-                  <span className="text-white">
-                    autorii propriei povești
-                  </span>
-                  , să o scrie conștient și autentic, așa cum și-o doresc.
+                  <span className="text-white">autorii propriei povești</span>, să
+                  o scrie conștient și autentic, așa cum și-o doresc.
                 </p>
                 <p>
                   Tot ce fac pornește de la o premisă simplă: viața merge înainte
                   și provocări vor apărea mereu. Dar diferența dintre a fi un
                   simplu martor la propria viață și a fi cel care o conduce stă în{" "}
                   <span className="text-[#C89B7B]">
-                    capacitatea de a-ți schimba perspectiva.
+                    capacitatea de a-ți schimba&nbsp;perspectiva.
                   </span>
                 </p>
               </div>
@@ -519,20 +516,16 @@ export default function App() {
                 Lucrez cu oameni care:
               </p>
               <ul className="space-y-5 text-lg text-zinc-300">
-                <li className="flex gap-4">
-                  <span className="text-[#C89B7B] shrink-0">→</span>
-                  S-au săturat să se învârtă în aceleași cercuri.
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-[#C89B7B] shrink-0">→</span>
-                  Vor să iasă din tipare care îi țin pe loc, nu doar să le
-                  analizeze.
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-[#C89B7B] shrink-0">→</span>
-                  Pe care îi doare mai tare să rămână unde sunt, decât să facă
-                  pasul spre schimbare.
-                </li>
+                {[
+                  "S-au săturat să se învârtă în aceleași cercuri.",
+                  "Vor să iasă din tipare care îi țin pe loc, nu doar să le analizeze.",
+                  "Pe care îi doare mai tare să rămână unde sunt, decât să facă pasul spre schimbare.",
+                ].map((item) => (
+                  <li key={item} className="flex gap-4">
+                    <span className="text-[#C89B7B] shrink-0">→</span>
+                    <span className="text-balance">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </Reveal>
@@ -614,17 +607,16 @@ export default function App() {
                 Vine din:
               </p>
               <ul className="space-y-4 text-lg text-zinc-300">
-                <li className="flex gap-4">
-                  <span className="text-teal-500 shrink-0">—</span> Conștientizare
-                  profundă
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-teal-500 shrink-0">—</span> Reglare internă
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-teal-500 shrink-0">—</span> Acțiune
-                  repetată în direcția nouă
-                </li>
+                {[
+                  "Conștientizare profundă",
+                  "Reglare internă",
+                  "Acțiune repetată în direcția nouă",
+                ].map((item) => (
+                  <li key={item} className="flex gap-4">
+                    <span className="text-teal-500 shrink-0">—</span>
+                    <span className="text-balance">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </Reveal>
@@ -684,7 +676,7 @@ export default function App() {
                   <span className="font-cinematic text-2xl md:text-3xl text-zinc-700 shrink-0 leading-none">
                     0{idx + 1}
                   </span>
-                  <p className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed">
+                  <p className="text-balance text-lg md:text-xl text-zinc-300 font-light leading-relaxed">
                     {item}
                   </p>
                 </div>
@@ -756,7 +748,7 @@ export default function App() {
             </p>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16 md:mb-20">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 md:mb-20">
             {[
               {
                 title: "Unele relații se vor schimba",
@@ -837,7 +829,7 @@ export default function App() {
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 title: "Vei fi mai conștient",
@@ -879,9 +871,8 @@ export default function App() {
             </div>
 
             <h2 className="font-cinematic text-3xl md:text-6xl text-white leading-tight mb-6">
-              Dar dacă ai citit până aici…
-              <br />
-              <span className="italic text-glow-teal text-[#14b8a6]">
+              <span className="block text-balance">Dar dacă ai citit până aici…</span>
+              <span className="block text-balance italic text-glow-teal text-[#14b8a6] mt-2">
                 deja știi că ceva trebuie să se schimbe.
               </span>
             </h2>
@@ -891,8 +882,8 @@ export default function App() {
             <div className="glass-card p-8 md:p-12 max-w-xl mx-auto rounded-sm mt-14 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#C89B7B] via-teal-500 to-[#C89B7B]"></div>
 
-              <p className="text-white text-lg md:text-xl mb-2">
-                Aplică pentru o discuție de 20–30 min
+              <p className="text-balance text-white text-lg md:text-xl mb-2">
+                Aplică pentru o discuție de 20–30&nbsp;min
               </p>
               <p className="text-zinc-400 text-sm mb-8">
                 (completezi formularul și te contactez eu)

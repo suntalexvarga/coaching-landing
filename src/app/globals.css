@@ -48,6 +48,25 @@ body {
   font-family: var(--font-playfair), "Playfair Display", serif;
 }
 
+/* Tipografie: fara cuvinte orfane pe ultimul rand.
+   - balance: distribuie randurile egal (titluri / text de display)
+   - pretty:  evita ca ultimul rand sa ramana cu un singur cuvant (body) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-cinematic,
+.text-balance {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
 /* Subtle Grain/Noise Overlay */
 .bg-noise {
   position: fixed;
